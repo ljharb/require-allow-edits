@@ -16,4 +16,4 @@ outputs:
     description: 'Whether the "allow edits" box is checked or not'
 runs:
   using: 'node12'
-  main: 'index.js'
+  main: 'dist/index.js'
