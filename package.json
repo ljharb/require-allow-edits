@@ -4,6 +4,8 @@
 	"description": "A GitHub action to require \"allow edits\" to be checked on a PR.",
 	"main": "index.mjs",
 	"scripts": {
+		"lint": "eslint .",
+		"pretest": "npm run lint",
 		"test": "echo \"Error: no test specified\" && exit 1"
 	},
 	"repository": {
@@ -22,5 +24,12 @@
 	},
 	"engines": {
 		"node": "^14"
+	},
+	"devDependencies": {
+		"@babel/core": "^7.11.4",
+		"@babel/eslint-parser": "^7.11.4",
+		"@babel/plugin-syntax-top-level-await": "^7.10.4",
+		"@ljharb/eslint-config": "^17.2.0",
+		"eslint": "^7.7.0"
 	}
 }
