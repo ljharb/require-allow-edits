@@ -1,0 +1,19 @@
+name: 'Require "Allow Edits"'
+description: 'A GitHub action to require "allow edits" to be checked on a PR.'
+author: 'Jordan Harband <ljharb@gmail.com>'
+branding:
+  icon: 'git-pull-request'
+  color: 'blue'
+inputs:
+  github_token:
+    description: 'The GitHub token (if not provided, the env var GITHUB_TOKEN will be used)'
+    required: false
+  pull_number:
+    description: 'The pull request number'
+    required: true
+outputs:
+  maintainer_can_modify:
+    description: 'Whether the "allow edits" box is checked or not'
+runs:
+  using: 'node14'
+  main: 'index.mjs'
