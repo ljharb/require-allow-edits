@@ -1,0 +1,19 @@
+{
+	"name": "require-allow-edits",
+	"version": "0.0.0",
+	"description": "A GitHub action to require \"allow edits\" to be checked on a PR.",
+	"main": "index.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/ljharb/require-allow-edits.git"
+	},
+	"author": "Jordan Harband <ljharb@gmail.com>",
+	"license": "MIT",
+	"bugs": {
+		"url": "https://github.com/ljharb/require-allow-edits/issues"
+	},
+	"homepage": "https://github.com/ljharb/require-allow-edits#readme"
+}
