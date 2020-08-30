@@ -6,7 +6,8 @@ const token = core.getInput('github_token') || process.env.GITHUB_TOKEN;
 
 const octokit = github.getOctokit(token);
 
-const pull_number = parseInt(core.getInput('pull_number'), 10);
+const PR = github.context.payload.number || process.env.PULL_NUMBER;
+const pull_number = parseInt(PR, 10);
 
 octokit.pulls.get({
 	...github.context.repo,
