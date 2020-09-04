@@ -9,15 +9,20 @@ const octokit = github.getOctokit(token);
 const PR = github.context.payload.number || process.env.PULL_NUMBER;
 const pull_number = parseInt(PR, 10);
 
-console.info(`PR #${pull_number} (from ${PR})`);
+console.info(`PR #${pull_number} (from ${PR}, repo ${github.context.repo.owner}/${github.context.repo.repo})`);
 
 octokit.pulls.get({
 	...github.context.repo,
 	pull_number,
 }).then(({ data }) => {
-	core.setOutput('maintainer_can_modify', data.maintainer_can_modify);
+	core.debug(`data.maintainer_can_modify: ${data.maintainer_can_modify}`);
+	core.debug(`data.head.repo.full_name: ${data.head.repo.full_name}`);
+	core.debug(`github.context.repo: ${github.context.repo.owner}/${github.context.repo.repo}`);
 
-	if (!data.maintainer_can_modify) {
+	const allowsEdits = data.maintainer_can_modify || data.head.repo.full_name === `${github.context.repo.owner}/${github.context.repo.repo}`;
+	core.setOutput('maintainer_can_modify', allowsEdits);
+
+	if (!allowsEdits) {
 		core.setFailed('This pull request must have the “allow edits” checkbox checked.');
 	}
 }).catch((error) => {
