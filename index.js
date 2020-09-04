@@ -14,9 +14,10 @@ octokit.pulls.get({
 	...github.context.repo,
 	pull_number,
 }).then(({ data }) => {
-	core.setOutput('maintainer_can_modify', data.maintainer_can_modify);
+	const allowsEdits = data.maintainer_can_modify || data.head.repo.full_name === `${github.context.repo.owner}/${github.context.repo.repo}`;
+	core.setOutput('maintainer_can_modify', allowsEdits);
 
-	if (!data.maintainer_can_modify) {
+	if (!allowsEdits) {
 		core.setFailed('This pull request must have the “allow edits” checkbox checked.');
 	}
 }).catch((error) => {
