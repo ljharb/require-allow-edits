@@ -2,7 +2,7 @@
 	"name": "require-allow-edits",
 	"version": "0.0.0",
 	"description": "A GitHub action to require \"allow edits\" to be checked on a PR.",
-	"main": "index.mjs",
+	"main": "dist/index.js",
 	"scripts": {
 		"build": "browserify --node index.js -o dist/index.js",
 		"lint": "eslint .",
