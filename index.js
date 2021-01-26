@@ -14,6 +14,7 @@ octokit.pulls.get({
 	...github.context.repo,
 	pull_number,
 }).then(({ data }) => {
+	core.debug(data);
 	core.debug(`data.maintainer_can_modify: ${data.maintainer_can_modify}`);
 	core.debug(`data.head.repo.full_name: ${data.head.repo.full_name}`);
 	core.debug(`github.context.repo: ${github.context.repo.owner}/${github.context.repo.repo}`);
