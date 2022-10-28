@@ -27,12 +27,12 @@
 		"node": "^12"
 	},
 	"devDependencies": {
-		"@babel/core": "^7.11.4",
-		"@babel/eslint-parser": "^7.11.4",
-		"@babel/plugin-syntax-top-level-await": "^7.10.4",
-		"@ljharb/eslint-config": "^17.2.0",
+		"@babel/core": "^7.19.6",
+		"@babel/eslint-parser": "^7.19.1",
+		"@babel/plugin-syntax-top-level-await": "^7.14.5",
+		"@ljharb/eslint-config": "^21.0.0",
 		"browserify": "^16.5.2",
 		"encoding": "^0.1.13",
-		"eslint": "^7.7.0"
+		"eslint": "=8.8.0"
 	}
 }
