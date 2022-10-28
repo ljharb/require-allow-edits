@@ -10,7 +10,7 @@ const pull_number = parseInt(PR, 10);
 
 console.info(`PR #${pull_number} (from ${PR}, repo ${github.context.repo.owner}/${github.context.repo.repo})`);
 
-octokit.pulls.get({
+octokit.rest.pulls.get({
 	...github.context.repo,
 	pull_number,
 }).then(({ data }) => {
