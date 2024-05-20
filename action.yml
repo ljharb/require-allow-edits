@@ -9,9 +9,6 @@ inputs:
     description: 'The GitHub token (if not provided, the env var GITHUB_TOKEN will be used)'
     default: ${{ github.token }}
     required: true
-  pull_number:
-    description: 'The pull request number'
-    required: true
 outputs:
   maintainer_can_modify:
     description: 'Whether the "allow edits" box is checked or not'
