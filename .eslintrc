@@ -1,26 +1,13 @@
 {
-	"extends": "@ljharb",
+	"extends": "@ljharb/eslint-config/node/20",
 
 	"root": true,
 
-	"parser": "@babel/eslint-parser",
-
-	"parserOptions": {
-		"allowAwaitOutsideFunction": true,
-	},
-
 	"rules": {
 		"camelcase": 1,
-		"comma-dangle": [2, {
-			"arrays": "always-multiline",
-			"objects": "always-multiline",
-			"imports": "always-multiline",
-			"exports": "always-multiline",
-			"functions": "always-multiline",
-		}],
-		"object-shorthand": [2, "always", {
-			"avoidQuotes": true,
-			"avoidExplicitReturnArrows": true,
-		}],
 	},
+
+	"ignorePatterns": [
+		"dist/**",
+	],
 }

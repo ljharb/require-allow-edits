@@ -13,5 +13,5 @@ outputs:
   maintainer_can_modify:
     description: 'Whether the "allow edits" box is checked or not'
 runs:
-  using: 'node12'
+  using: 'node20'
   main: 'dist/index.js'
