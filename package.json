@@ -4,7 +4,7 @@
 	"description": "A GitHub action to require \"allow edits\" to be checked on a PR.",
 	"main": "dist/index.js",
 	"scripts": {
-		"build": "esbuild index.js --outdir=dist --minify --sourcemap",
+		"build": "esbuild index.js --bundle --platform=node --outdir=dist --minify --sourcemap",
 		"lint": "eslint .",
 		"pretest": "npm run lint",
 		"test": "echo \"Error: no test specified\" && exit 1"
