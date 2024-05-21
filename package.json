@@ -1,6 +1,6 @@
 {
 	"name": "require-allow-edits",
-	"version": "1.0.3",
+	"version": "2.0.0",
 	"description": "A GitHub action to require \"allow edits\" to be checked on a PR.",
 	"main": "dist/index.js",
 	"scripts": {
