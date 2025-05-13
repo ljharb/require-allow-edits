@@ -27,8 +27,8 @@
 		"node": ">= 20"
 	},
 	"devDependencies": {
-		"@ljharb/eslint-config": "^21.1.0",
-		"esbuild": "^0.21.3",
+		"@ljharb/eslint-config": "^21.1.1",
+		"esbuild": "^0.25.4",
 		"eslint": "=8.8.0"
 	}
 }
